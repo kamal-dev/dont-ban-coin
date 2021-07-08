@@ -1,5 +1,5 @@
-const DontBanCoin = artifacts.require("./DontBanCoin.sol");
+const DontBanCrypto = artifacts.require("./DontBanCrypto.sol");
 
 module.exports = function (deployer) {
-  deployer.deploy(DontBanCoin);
+  deployer.deploy(DontBanCrypto, 50000000);
 };

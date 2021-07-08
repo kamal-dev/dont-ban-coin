@@ -53,7 +53,7 @@
   "sourceMap": "66:352:1:-;;;113:10;90:33;;;;;;;;;;;;;;;;;;;;66:352;8:9:-1;5:2;;;30:1;27;20:12;5:2;66:352:1;;;;;;;",
   "deployedSourceMap": "66:352:1:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;66:352:1;;;;;;;;;;;;;;;;;;;;;;;;;;;;;127:36;;;:::i;:::-;;;;;;;;;;;;;;;;;;;90:33;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;313:103;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;313:103:1;;;;;;;;;;;;;;;;;:::i;:::-;;127:36;;;;:::o;90:33::-;;;;;;;;;;;;;:::o;313:103::-;225:5;;;;;;;;;;;211:19;;:10;:19;;;196:101;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;402:9;375:24;:36;;;;313:103;:::o",
   "source": "// SPDX-License-Identifier: MIT\npragma solidity >=0.4.22 <0.9.0;\n\ncontract Migrations {\n  address public owner = msg.sender;\n  uint public last_completed_migration;\n\n  modifier restricted() {\n    require(\n      msg.sender == owner,\n      \"This function is restricted to the contract's owner\"\n    );\n    _;\n  }\n\n  function setCompleted(uint completed) public restricted {\n    last_completed_migration = completed;\n  }\n}\n",
-  "sourcePath": "/home/pseudo-x/Documents/Blockchain/Dont_ban_coin/contracts/Migrations.sol",
+  "sourcePath": "/home/pseudo-x/Documents/Blockchain/Dont_ban_crypto/contracts/Migrations.sol",
   "ast": {
     "absolutePath": "project:/contracts/Migrations.sol",
     "exportedSymbols": {
@@ -915,12 +915,12 @@
     "5777": {
       "events": {},
       "links": {},
-      "address": "0x1592B1eE8e071A2Ded80a5B63459a1156a289ac6",
-      "transactionHash": "0xe8658b3a970a930abcd37d8a1ed64575db099aaade4498c8c7f7b8c61a70587e"
+      "address": "0x8389b282dF50813e0e51Bafde6291fD156F6AF99",
+      "transactionHash": "0x777c0f56a3fe1b869b017847cceca2df8406e533445ca5468c253c6706a83cd9"
     }
   },
   "schemaVersion": "3.4.1",
-  "updatedAt": "2021-07-07T14:58:13.037Z",
+  "updatedAt": "2021-07-08T13:40:37.166Z",
   "networkType": "ethereum",
   "devdoc": {
     "methods": {}
