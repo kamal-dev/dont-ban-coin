@@ -69,4 +69,28 @@ contract("DontBanCryptoSale", function(accounts) {
 
         });
     });
+
+    it("For end of the token Sale", function() {
+        return DontBanCrypto.deployed().then(function(instance) {
+            tokenInstance = instance;
+            return DontBanCryptoSale.deployed();
+        }).then(function(instance) {
+            tokenSaleInstance = instance;
+            return tokenSaleInstance.endSale({from: buyer});
+        }).then(assert.fail).catch(function(error) {
+            assert(error.message.toString().indexOf("revert") >= 0,
+            "Only admin can end the sale.");
+            return tokenSaleInstance.endSale({from: admin});
+        }).then(function(receipt) {
+            return tokenInstance.balanceOf(admin);
+        }).then(function(balance) {
+            assert.equal(balance.toNumber(), 999999999999990,
+            "Return all unsold tokens to admin.");
+            return tokenSaleInstance.tokenPrice();
+        }).then(function(price) {
+            console.log("KAMAL "+price);
+            assert.equal(price.toNumber(), 0, "Token price reset");
+        });
+    });
+
 });

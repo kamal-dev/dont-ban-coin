@@ -4,7 +4,7 @@ import "./DontBanCrypto.sol";
 contract DontBanCryptoSale {
 
     DontBanCrypto public tokenContract;
-    address admin;
+    address payable admin;
     uint256 public tokenPrice;
     uint256 public tokenSold;
 
@@ -31,4 +31,12 @@ contract DontBanCryptoSale {
         tokenSold += _numberOfTokens;
         emit Sell(msg.sender, _numberOfTokens);
     }
+
+    function endSale() public {
+        require(msg.sender == admin);
+        require(tokenContract.transfer(admin,
+            tokenContract.balanceOf(address(this))));
+        selfdestruct(admin);
+    }
+
 }

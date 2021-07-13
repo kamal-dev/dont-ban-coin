@@ -1,6 +1,6 @@
 const DontBanCrypto = artifacts.require("./DontBanCrypto.sol");
 
-contract('DontBanCoin', function(accounts) {
+contract('DontBanCrypto', function(accounts) {
     var tokenInstance;
 
     it('Assigns name and symbol to the contract', function() {
