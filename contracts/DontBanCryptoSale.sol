@@ -36,7 +36,7 @@ contract DontBanCryptoSale {
         require(msg.sender == admin);
         require(tokenContract.transfer(admin,
             tokenContract.balanceOf(address(this))));
-        selfdestruct(admin);
+        admin.transfer(address(this).balance);
     }
 
 }

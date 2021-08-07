@@ -86,10 +86,10 @@ contract("DontBanCryptoSale", function(accounts) {
         }).then(function(balance) {
             assert.equal(balance.toNumber(), 999999999999990,
             "Return all unsold tokens to admin.");
-            return tokenSaleInstance.tokenPrice();
-        }).then(function(price) {
-            console.log("KAMAL "+price);
-            assert.equal(price.toNumber(), 0, "Token price reset");
+            const getBalance = async() => {
+                const balance = await web3.eth.getBalance(tokenSaleInstance.address);
+                assert.equal(balance.toNumber(),0);
+            }
         });
     });
 

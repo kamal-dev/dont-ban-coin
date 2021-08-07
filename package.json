@@ -1,0 +1,17 @@
+{
+    "name": "Don't Ban Crypto",
+    "version": "1.0.0",
+    "description": "DBC Token Sale ICO",
+    "main": "truffle.js",
+    "directories": {
+        "test": "test"
+    },
+    "scripts": {
+        "dev": "lite-server"
+    },
+    "author": "Kamal Dev",
+    "license": "ISC",
+    "devDependencies": {
+        "lite-server": "^2.3.0"
+    }
+}
