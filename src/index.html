@@ -8,7 +8,55 @@
         <link rel="stylesheet" href="css/bootstrap.min.css">
     </head>
     <body>
-        <h1>DBC Token Initial Coin Offering</<h1>
+        <div class="container" style="width: 650px;">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h1 class="text-center">DBC Token Initial Coin Offering</h1>
+                    <hr/>
+                    <br/>
+                </div>
+                <div id="loader">
+                    <p class="text-center">Loading...</p>
+                </div>
+                <div id="content" class="text-center">
+                    <h5>Public Offering for the "Don't Ban Cypto" Token.
+                    Token price is <b><span class="token-price"></span></b> Ether.
+                    You currently have <b><span class="dbc-balance"></span></b> &nbsp DBC. </h5>
+                    <br>
+                    <p><i>This represents a request to all the government and Public
+                    authorities to let allow the use of crypto currency officially.
+                    The potential of cryptocurrency is untapped but with a drawback
+                    of power intensive process involved in creating a block. But
+                    eventually this will also get solved by modifying the block
+                    creation process and using renewable source of energy. Thus
+                    it will also lead to a new and efficient way to generate
+                    green energy thus leading to new energy revolution.</i></p>
+
+                    <br>
+                    <form role="form">
+                        <div class="form-group">
+                            <div class="input-group">
+                                <input type="number" class="form-control input-lg" id="numberOfToken"
+                                name="number" value="1" min="1" pattern="[0-9]">
+                                </input>
+                                <span class="input-group-btn">
+                                    <button type="submit" class="btn btn-primary btn-lg" name="button">Buy Tokens</button>
+                                </span>
+                            </div>
+                        </div>
+                    </form>
+                    <br>
+                    <div class="progress">
+                        <div id="progress" class="progress-bar progress-bar-striped active"
+                        aria-valuemin="0" aria-valuemax="100">
+                        </div>
+                    </div>
+                    <p><span class="token-sold"></span> / <span class="tokens-available"></span> tokens sold</p>
+                    <hr>
+                    <p id="account-address"></p>
+                </div>
+            </div>
+        </div>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
         <script src="js/bootstrap.min.js" charset="utf-8"></script>
         <script src="js/web3.min.js" charset="utf-8"></script>
